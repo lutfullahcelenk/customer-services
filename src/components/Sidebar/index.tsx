@@ -1,10 +1,15 @@
 // @ts-nocheck
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
+import { useAppSelector } from "../../app/hooks";
 //assets
 import close from "../../assets/close.png";
 //constants
-import { sidebarItems } from "../../constants/sidebarItems";
+import { users } from "../../constants/users";
+import {
+  sidebarItemsAdmin,
+  sidebarItemsOthers,
+} from "../../constants/sidebarItems";
 
 type ISidebar = {
   isOpen: boolean;
@@ -13,6 +18,18 @@ type ISidebar = {
 
 const Sidebar = ({ isOpen, setIsOpen }: ISidebar) => {
   const navigate = useNavigate();
+  const [isAdmin, setIsAdmin] = useState(false);
+  const { name } = useAppSelector((state) => state.auth);
+
+  useEffect(() => {
+    users.find(
+      (user) =>
+        user.fullName.toLocaleLowerCase() === name.toLocaleLowerCase() &&
+        user.role === "Admin"
+    )
+      ? setIsAdmin(true)
+      : setIsAdmin(false);
+  }, [name]);
 
   return (
     <div
@@ -37,7 +54,7 @@ const Sidebar = ({ isOpen, setIsOpen }: ISidebar) => {
           Pages
         </div>
 
-        {sidebarItems.map((item: any) => (
+        {(isAdmin ? sidebarItemsAdmin : sidebarItemsOthers).map((item: any) => (
           <div
             key={item.id}
             className="flex items-center m-3 mt-2 cursor-pointer"

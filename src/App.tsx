@@ -1,11 +1,11 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 import React, { useEffect, useState } from "react";
 import { Routes, Route } from "react-router-dom";
-import Auth from "./pages/Auth";
 import { useAppSelector } from "./app/hooks";
 //components
 import Navbar from "./components/Navbar";
 //pages
+import Auth from "./pages/Auth";
 import Dashboard from "./pages/Dashboard";
 import OrderDetail from "./pages/OrderDetail";
 import Orders from "./pages/Orders";
@@ -16,7 +16,6 @@ import { users } from "./constants/users";
 function App() {
   const [isOpen, setIsOpen] = useState(false);
   const [isAdmin, setIsAdmin] = useState(false);
-  console.log('isAdmin', isAdmin)
   const { loggedIn, name } = useAppSelector((state) => state.auth);
 
   useEffect(() => {
@@ -27,7 +26,7 @@ function App() {
     )
       ? setIsAdmin(true)
       : setIsAdmin(false);
-  }, []);
+  }, [name]);
 
   return (
     <div>
