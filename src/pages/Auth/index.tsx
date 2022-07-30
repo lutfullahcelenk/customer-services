@@ -1,7 +1,10 @@
-import { useState } from "react";
+/* eslint-disable no-lone-blocks */
+import { useEffect, useState } from "react";
 import { useAppDispatch } from "../../app/hooks";
 import { login } from "../../features/authSlice";
 import { useNavigate } from "react-router-dom";
+//constants
+import { users } from "../../constants/users";
 
 const initialState = {
   fullName: "",
@@ -13,6 +16,7 @@ const Auth = () => {
   const dispatch = useAppDispatch();
   const navigate = useNavigate();
   const [formValue, setFormValue] = useState(initialState);
+  const [permitted, setPermitted] = useState(false);
   const { fullName, email, password } = formValue;
 
   //onchange function for form inputs
@@ -20,6 +24,7 @@ const Auth = () => {
     setFormValue({ ...formValue, [e.target.name]: e.target.value });
   };
 
+  //login function
   const handleLogin = () => {
     dispatch(
       login({
@@ -31,6 +36,17 @@ const Auth = () => {
     );
     navigate("/dashboard");
   };
+
+  //control mechanism
+  useEffect(() => {
+    users.find(
+      (user) =>
+        user.fullName.toLocaleLowerCase() === fullName.toLocaleLowerCase() &&
+        user.email === email
+    )
+      ? setPermitted(true)
+      : setPermitted(false);
+  }, [fullName, email]);
 
   return (
     <section className="flex h-screen gradient">
@@ -82,7 +98,7 @@ const Auth = () => {
           type="button"
           className="px-10 py-2 my-6 uppercase border rounded-lg"
           onClick={() => {
-            handleLogin();
+            fullName && email && password && permitted && handleLogin();
           }}
         >
           Login

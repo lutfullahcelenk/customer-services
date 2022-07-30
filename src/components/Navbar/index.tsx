@@ -18,7 +18,7 @@ const Navbar = ({ isOpen, setIsOpen }: INavbar) => {
 
   const handleLogout = () => {
     dispatch(logout());
-    navigate("/auth");
+    navigate("/");
   };
 
   return (

@@ -32,7 +32,7 @@ const Orders = ({ isOpen, setIsOpen }: IOrders) => {
       <Sidebar isOpen={isOpen} setIsOpen={setIsOpen} />
 
       <div className="w-full justify-start flex flex-col p-2 shadow-md sm:rounded-lg">
-        <Filter handleFilter={handleFilter} orderName={orderName} />
+        <Filter handleFilter={handleFilter} value={orderName} isFilter="orders" />
 
         <div className="overflow-x-auto ">
           <table className="w-full mt-6 text-sm text-left text-gray-500 dark:text-gray-400">
