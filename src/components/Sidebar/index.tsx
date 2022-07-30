@@ -41,7 +41,10 @@ const Sidebar = ({ isOpen, setIsOpen }: ISidebar) => {
           <div
             key={item.id}
             className="flex items-center m-3 mt-2 cursor-pointer"
-            onClick={() => navigate(item.path)}
+            onClick={() => {
+              navigate(item.path);
+              setIsOpen(false);
+            }}
           >
             <img src={item.image} alt="icons" />
             <div className="mx-3 text-white">{item.title}</div>

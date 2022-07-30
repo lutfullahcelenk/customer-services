@@ -28,7 +28,7 @@ const Orders = ({ isOpen, setIsOpen }: IOrders) => {
   );
 
   return (
-    <div className="flex h-screen gradient">
+    <div className="flex h-full gradient">
       <Sidebar isOpen={isOpen} setIsOpen={setIsOpen} />
 
       <div className="w-full justify-start flex flex-col p-2 shadow-md sm:rounded-lg">
@@ -68,7 +68,11 @@ const Orders = ({ isOpen, setIsOpen }: IOrders) => {
                     <button
                       type="button"
                       className="border bg-indigo-700 text-white px-2 ml-4 py-1 rounded-lg"
-                      onClick={() => navigate(`/orders/${order.id}`)}
+                      onClick={() =>
+                        navigate(`/orders/${order.id}`, {
+                          state: { id: order.id },
+                        })
+                      }
                     >
                       {xs ? "Detay" : "Sipariş Detayı"}
                     </button>

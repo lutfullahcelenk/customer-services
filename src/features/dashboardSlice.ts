@@ -34,7 +34,7 @@ export const dashboardSlice = createSlice({
   reducers: {},
 });
 
-export const {} = dashboardSlice.actions;
+// export const {} = dashboardSlice.actions;
 
 export const SelectDashboard = (state: RootState) => state.dashboard.data;
 
