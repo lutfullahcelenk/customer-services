@@ -21,6 +21,7 @@ const Sidebar = ({ isOpen, setIsOpen }: ISidebar) => {
   const [isAdmin, setIsAdmin] = useState(false);
   const { name } = useAppSelector((state) => state.auth);
 
+  //control mechanism
   useEffect(() => {
     users.find(
       (user) =>

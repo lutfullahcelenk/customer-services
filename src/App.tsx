@@ -18,6 +18,7 @@ function App() {
   const [isAdmin, setIsAdmin] = useState(false);
   const { loggedIn, name } = useAppSelector((state) => state.auth);
 
+  //control mechanism
   useEffect(() => {
     users.find(
       (user) =>
