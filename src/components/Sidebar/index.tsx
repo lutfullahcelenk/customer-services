@@ -1,5 +1,6 @@
 // @ts-nocheck
 import React from "react";
+import { useNavigate } from "react-router-dom";
 //assets
 import close from "../../assets/close.png";
 //constants
@@ -11,6 +12,8 @@ type ISidebar = {
 };
 
 const Sidebar = ({ isOpen, setIsOpen }: ISidebar) => {
+  const navigate = useNavigate();
+
   return (
     <div
       className={`${
@@ -38,6 +41,7 @@ const Sidebar = ({ isOpen, setIsOpen }: ISidebar) => {
           <div
             key={item.id}
             className="flex items-center m-3 mt-2 cursor-pointer"
+            onClick={() => navigate(item.path)}
           >
             <img src={item.image} alt="icons" />
             <div className="mx-3 text-white">{item.title}</div>

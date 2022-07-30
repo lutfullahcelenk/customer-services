@@ -9,16 +9,19 @@ export const sidebarItems = [
       id: 0,
       title: "Dashboard",
       image: dashboard,
+      path : "/dashboard"
     },
     {
         id: 1,
         title: "Siparişlerim",
         image: orders,
+        path : "/orders"
     },
     {
       id: 2,
       title: "Kullanıcı Yönetimi",
       image: settings,
+      path : "/user-managements"
     },
   ];
   
