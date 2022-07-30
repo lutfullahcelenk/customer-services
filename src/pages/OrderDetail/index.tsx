@@ -1,5 +1,6 @@
 import React from "react";
 import { useLocation } from "react-router-dom";
+import OrderDetailCard from "../../components/OrderDetailCard";
 //components
 import Sidebar from "../../components/Sidebar";
 //constants
@@ -33,56 +34,7 @@ const OrderDetail = ({ isOpen, setIsOpen }: IOrderDetail) => {
           ve siparişin tutarı gösterilmektedir.
         </p>
 
-        <div className="grid gird-cols-1 lg:grid-cols-2 gap-5 w-full md:w-2/3 md:mx-auto text-center">
-          <div className="bg-white p-6 rounded-md">
-            <p className="font-bold text-xl md:text-2xl py-4 tracking-wide uppercase text-indigo-800">
-              Müşteri ismi
-            </p>
-            <p className="text-gray-500 font-semibold py-4 italic">
-              {filteredOrder[0].customer}
-            </p>
-          </div>
-          <div className="bg-white p-6 rounded-md">
-            <p className="font-bold text-xl md:text-2xl py-4 tracking-wide uppercase text-indigo-800">
-              Sipariş Detayı
-            </p>
-            <p className="text-gray-500 font-semibold py-4 italic">
-              {filteredOrder[0].detail}
-            </p>
-          </div>
-          <div className="bg-white p-6 rounded-md">
-            <p className="font-bold text-xl md:text-2xl py-4 tracking-wide uppercase text-indigo-800">
-              Sipariş Tarih
-            </p>
-            <p className="text-gray-500 font-semibold py-4 italic">
-              {filteredOrder[0].date}
-            </p>
-          </div>
-          <div className="bg-white p-6 rounded-md">
-            <p className="font-bold text-xl md:text-2xl py-4 tracking-wide uppercase text-indigo-800">
-              Sipariş Tutarı
-            </p>
-            <p className="text-gray-500 font-semibold py-4 italic">
-              {filteredOrder[0].cost} TL
-            </p>
-          </div>
-          <div className="bg-white p-6 rounded-md">
-            <p className="font-bold text-xl md:text-2xl py-4 tracking-wide uppercase text-indigo-800">
-              Müşteri Adresi
-            </p>
-            <p className="text-gray-500 font-semibold py-4 italic">
-              {filteredOrder[0].address}
-            </p>
-          </div>
-          <div className="bg-white p-6 rounded-md">
-            <p className="font-bold text-xl md:text-2xl py-4 tracking-wide uppercase text-indigo-800">
-              Müşteri Notu
-            </p>
-            <p className="text-gray-500 font-semibold py-4 italic">
-              {filteredOrder[0].note}
-            </p>
-          </div>
-        </div>
+       <OrderDetailCard data={filteredOrder[0]} />
       </div>
     </div>
   );

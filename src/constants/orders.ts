@@ -6,7 +6,13 @@ export const orders = [
     cost: 87,
     detail: "Tamamlanmış Sipariş",
     note: "Lütfen kapıyı çalmayınız.",
-    address: "Koşuyolu Mh. Mahmut Yesari Cad. No:8 34718 Kadıköy/İstanbul"
+    address: "Koşuyolu Mh. Mahmut Yesari Cad. No:8 34718 Kadıköy/İstanbul",
+    content: [
+      { order: "1 Mercimek Çorbası" },
+      { order: "1 porsiyon Adana Dürüm" },
+      { order: "1 adet Kola" },
+      { order: "1 porsyion Künefe" },
+    ],
   },
   {
     id: 2,
@@ -15,7 +21,13 @@ export const orders = [
     cost: 64,
     detail: "Tamamlanmış Sipariş",
     note: "Lütfen kapıyı çalmayınız.",
-    address: "Koşuyolu Mh. Mahmut Yesari Cad. No:8 34718 Kadıköy/İstanbul"
+    address: "Koşuyolu Mh. Mahmut Yesari Cad. No:8 34718 Kadıköy/İstanbul",
+    content: [
+      { order: "1 Mercimek Çorbası" },
+      { order: "1 porsiyon Adana Dürüm" },
+      { order: "1 adet Kola" },
+      { order: "1 porsyion Künefe" },
+    ],
   },
   {
     id: 3,
@@ -24,7 +36,13 @@ export const orders = [
     cost: 56,
     detail: "Yolda Olan Sipariş",
     note: "Lütfen kapıyı çalmayınız.",
-    address: "Koşuyolu Mh. Mahmut Yesari Cad. No:8 34718 Kadıköy/İstanbul"
+    address: "Koşuyolu Mh. Mahmut Yesari Cad. No:8 34718 Kadıköy/İstanbul",
+    content: [
+      { order: "1 Mercimek Çorbası" },
+      { order: "1 porsiyon Adana Dürüm" },
+      { order: "1 adet Kola" },
+      { order: "1 porsyion Künefe" },
+    ],
   },
   {
     id: 4,
@@ -33,7 +51,13 @@ export const orders = [
     cost: 78,
     detail: "Yeni Sipariş",
     note: "Lütfen kapıyı çalmayınız.",
-    address: "Koşuyolu Mh. Mahmut Yesari Cad. No:8 34718 Kadıköy/İstanbul"
+    address: "Koşuyolu Mh. Mahmut Yesari Cad. No:8 34718 Kadıköy/İstanbul",
+    content: [
+      { order: "1 Mercimek Çorbası" },
+      { order: "1 porsiyon Adana Dürüm" },
+      { order: "1 adet Kola" },
+      { order: "1 porsyion Künefe" },
+    ],
   },
   {
     id: 5,
@@ -42,16 +66,28 @@ export const orders = [
     cost: 102,
     detail: "Tamamlanmış Sipariş",
     note: "Lütfen kapıyı çalmayınız.",
-    address: "Koşuyolu Mh. Mahmut Yesari Cad. No:8 34718 Kadıköy/İstanbul"
+    address: "Koşuyolu Mh. Mahmut Yesari Cad. No:8 34718 Kadıköy/İstanbul",
+    content: [
+      { order: "1 Mercimek Çorbası" },
+      { order: "1 porsiyon Adana Dürüm" },
+      { order: "1 adet Kola" },
+      { order: "1 porsyion Künefe" },
+    ],
   },
   {
-    id: 6   ,
+    id: 6,
     customer: "Burak KALIN",
     date: "30.07.2022",
     cost: 56,
     detail: "Tamamlanmış Sipariş",
     note: "Lütfen kapıyı çalmayınız.",
-    address: "Koşuyolu Mh. Mahmut Yesari Cad. No:8 34718 Kadıköy/İstanbul"
+    address: "Koşuyolu Mh. Mahmut Yesari Cad. No:8 34718 Kadıköy/İstanbul",
+    content: [
+      { order: "1 Mercimek Çorbası" },
+      { order: "1 porsiyon Adana Dürüm" },
+      { order: "1 adet Kola" },
+      { order: "1 porsyion Künefe" },
+    ],
   },
   {
     id: 7,
@@ -60,9 +96,15 @@ export const orders = [
     cost: 55,
     detail: "Yeni Sipariş",
     note: "Lütfen kapıyı çalmayınız.",
-    address: "Koşuyolu Mh. Mahmut Yesari Cad. No:8 34718 Kadıköy/İstanbul"
+    address: "Koşuyolu Mh. Mahmut Yesari Cad. No:8 34718 Kadıköy/İstanbul",
+    content: [
+      { order: "1 Mercimek Çorbası" },
+      { order: "1 porsiyon Adana Dürüm" },
+      { order: "1 adet Kola" },
+      { order: "1 porsyion Künefe" },
+    ],
   },
-  
+
   {
     id: 8,
     customer: "Kartal BAKIR",
@@ -70,9 +112,15 @@ export const orders = [
     cost: 82,
     detail: "Yolda Olan Sipariş",
     note: "Lütfen kapıyı çalmayınız.",
-    address: "Koşuyolu Mh. Mahmut Yesari Cad. No:8 34718 Kadıköy/İstanbul"
+    address: "Koşuyolu Mh. Mahmut Yesari Cad. No:8 34718 Kadıköy/İstanbul",
+    content: [
+      { order: "1 Mercimek Çorbası" },
+      { order: "1 porsiyon Adana Dürüm" },
+      { order: "1 adet Kola" },
+      { order: "1 porsyion Künefe" },
+    ],
   },
- 
+
   {
     id: 9,
     customer: "Berk CİRDİ",
@@ -80,7 +128,13 @@ export const orders = [
     cost: 45,
     detail: "Yolda Olan Sipariş",
     note: "Lütfen kapıyı çalmayınız.",
-    address: "Koşuyolu Mh. Mahmut Yesari Cad. No:8 34718 Kadıköy/İstanbul"
+    address: "Koşuyolu Mh. Mahmut Yesari Cad. No:8 34718 Kadıköy/İstanbul",
+    content: [
+      { order: "1 Mercimek Çorbası" },
+      { order: "1 porsiyon Adana Dürüm" },
+      { order: "1 adet Kola" },
+      { order: "1 porsyion Künefe" },
+    ],
   },
   {
     id: 10,
@@ -89,7 +143,13 @@ export const orders = [
     cost: 66,
     detail: "Yeni Sipariş",
     note: "Lütfen kapıyı çalmayınız.",
-    address: "Koşuyolu Mh. Mahmut Yesari Cad. No:8 34718 Kadıköy/İstanbul"
+    address: "Koşuyolu Mh. Mahmut Yesari Cad. No:8 34718 Kadıköy/İstanbul",
+    content: [
+      { order: "1 Mercimek Çorbası" },
+      { order: "1 porsiyon Adana Dürüm" },
+      { order: "1 adet Kola" },
+      { order: "1 porsyion Künefe" },
+    ],
   },
   {
     id: 11,
@@ -98,7 +158,13 @@ export const orders = [
     cost: 70,
     detail: "Yolda Olan Sipariş",
     note: "Lütfen kapıyı çalmayınız.",
-    address: "Koşuyolu Mh. Mahmut Yesari Cad. No:8 34718 Kadıköy/İstanbul"
+    address: "Koşuyolu Mh. Mahmut Yesari Cad. No:8 34718 Kadıköy/İstanbul",
+    content: [
+      { order: "1 Mercimek Çorbası" },
+      { order: "1 porsiyon Adana Dürüm" },
+      { order: "1 adet Kola" },
+      { order: "1 porsyion Künefe" },
+    ],
   },
   {
     id: 12,
@@ -107,6 +173,12 @@ export const orders = [
     cost: 52,
     detail: "Yeni Sipariş",
     note: "Lütfen kapıyı çalmayınız.",
-    address: "Koşuyolu Mh. Mahmut Yesari Cad. No:8 34718 Kadıköy/İstanbul"
+    address: "Koşuyolu Mh. Mahmut Yesari Cad. No:8 34718 Kadıköy/İstanbul",
+    content: [
+      { order: "1 Mercimek Çorbası" },
+      { order: "1 porsiyon Adana Dürüm" },
+      { order: "1 adet Kola" },
+      { order: "1 porsyion Künefe" },
+    ],
   },
 ];
