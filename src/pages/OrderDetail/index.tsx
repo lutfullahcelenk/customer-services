@@ -1,9 +1,18 @@
-import React from 'react'
+import React from "react";
+import Sidebar from "../../components/Sidebar";
 
-const OrderDetail = () => {
+type IOrderDetail = {
+  isOpen: boolean;
+  setIsOpen: any;
+};
+
+const OrderDetail = ({ isOpen, setIsOpen }: IOrderDetail) => {
   return (
-    <div>OrderDetail</div>
-  )
-}
+    <div className="flex h-screen gradient">
+      <Sidebar isOpen={isOpen} setIsOpen={setIsOpen} />
+      
+    </div>
+  );
+};
 
-export default OrderDetail
+export default OrderDetail;

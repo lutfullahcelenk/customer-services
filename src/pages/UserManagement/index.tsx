@@ -1,9 +1,18 @@
-import React from 'react'
+import React from "react";
+import Sidebar from "../../components/Sidebar";
 
-const UserManagement = () => {
+type IUserManagement = {
+  isOpen: boolean;
+  setIsOpen: any;
+};
+
+const UserManagement = ({ isOpen, setIsOpen }: IUserManagement) => {
   return (
-    <div>UserManagement</div>
-  )
-}
+    <div className="flex h-screen gradient">
+      <Sidebar isOpen={isOpen} setIsOpen={setIsOpen} />
+      
+    </div>
+  );
+};
 
-export default UserManagement
+export default UserManagement;
