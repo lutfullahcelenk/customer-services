@@ -1,22 +1,18 @@
 /* eslint-disable no-lone-blocks */
 import { useEffect, useState } from "react";
-import { useAppDispatch } from "../../app/hooks";
-import { login } from "../../features/authSlice";
+import { useAppDispatch, useAppSelector } from "../../app/hooks";
+import { login, SelectAuth } from "../../features/authSlice";
 import { useNavigate } from "react-router-dom";
 //constants
 import { users } from "../../constants/users";
 
-const initialState = {
-  fullName: "",
-  email: "",
-  password: "",
-};
-
 const Auth = () => {
   const dispatch = useAppDispatch();
   const navigate = useNavigate();
+  const initialState = useAppSelector(SelectAuth)
   const [formValue, setFormValue] = useState(initialState);
   const [permitted, setPermitted] = useState(false);
+  const [info, setInfo] = useState(false);
   const { fullName, email, password } = formValue;
 
   //onchange function for form inputs
@@ -98,11 +94,27 @@ const Auth = () => {
           type="button"
           className="px-10 py-2 my-6 uppercase border rounded-lg"
           onClick={() => {
-            fullName && email && password && permitted && handleLogin();
+            fullName && email && password && permitted
+              ? handleLogin()
+              : setInfo(true);
           }}
         >
           Login
         </button>
+
+        {info && (
+          <div className="text-gray-500 text-center">
+            <div className="py-3">
+              <p>Admin Giriş Bilgileri:</p>
+              <p>Göksu DEMİR / goksu.demir@bisu.com / 123123AB</p>
+            </div>
+
+            <div className="pb-3">
+              <p>User Giriş Bilgileri:</p>
+              <p>Emine KILIÇ / emine.kilic@bisu.com / 123123AB</p>
+            </div>
+          </div>
+        )}
       </div>
     </section>
   );

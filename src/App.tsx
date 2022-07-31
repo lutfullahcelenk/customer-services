@@ -16,18 +16,18 @@ import { users } from "./constants/users";
 function App() {
   const [isOpen, setIsOpen] = useState(false);
   const [isAdmin, setIsAdmin] = useState(false);
-  const { loggedIn, name } = useAppSelector((state) => state.auth);
+  const { loggedIn, fullName } = useAppSelector((state) => state.auth);
 
   //control mechanism
   useEffect(() => {
     users.find(
       (user) =>
-        user.fullName.toLocaleLowerCase() === name.toLocaleLowerCase() &&
+        user.fullName.toLocaleLowerCase() === fullName.toLocaleLowerCase() &&
         user.role === "Admin"
     )
       ? setIsAdmin(true)
       : setIsAdmin(false);
-  }, [name]);
+  }, [fullName]);
 
   return (
     <div>

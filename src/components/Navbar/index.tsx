@@ -14,7 +14,7 @@ type INavbar = {
 const Navbar = ({ isOpen, setIsOpen }: INavbar) => {
   const navigate = useNavigate();
   const dispatch = useAppDispatch();
-  const { name } = useAppSelector((state) => state.auth);
+  const { fullName } = useAppSelector((state) => state.auth);
 
   const handleLogout = () => {
     dispatch(logout());
@@ -28,7 +28,7 @@ const Navbar = ({ isOpen, setIsOpen }: INavbar) => {
           <img src={avatar} alt="avatar" />
         </div>
 
-        <span className="hidden p-2 font-bold uppercase md:block">{name}</span>
+        <span className="hidden p-2 font-bold uppercase md:block">{fullName}</span>
         <span
           className="block p-2 font-bold md:hidden"
           onClick={() => setIsOpen(!isOpen)}

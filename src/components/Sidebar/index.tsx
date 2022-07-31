@@ -19,18 +19,18 @@ type ISidebar = {
 const Sidebar = ({ isOpen, setIsOpen }: ISidebar) => {
   const navigate = useNavigate();
   const [isAdmin, setIsAdmin] = useState(false);
-  const { name } = useAppSelector((state) => state.auth);
+  const { fullName } = useAppSelector((state) => state.auth);
 
   //control mechanism
   useEffect(() => {
     users.find(
       (user) =>
-        user.fullName.toLocaleLowerCase() === name.toLocaleLowerCase() &&
+        user.fullName.toLocaleLowerCase() === fullName.toLocaleLowerCase() &&
         user.role === "Admin"
     )
       ? setIsAdmin(true)
       : setIsAdmin(false);
-  }, [name]);
+  }, [fullName]);
 
   return (
     <div
